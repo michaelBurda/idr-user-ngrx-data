@@ -7,6 +7,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {EntityDataService, EntityDefinitionService, EntityMetadataMap} from '@ngrx/data';
 import {UsersDataService} from './services/users-data.service';
+import {MatButtonModule} from '@angular/material/button';
 
 const entityMetadata: EntityMetadataMap = {
   User: {},
@@ -21,7 +22,8 @@ const entityMetadata: EntityMetadataMap = {
     CommonModule,
     UsersRoutingModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class UsersModule {
