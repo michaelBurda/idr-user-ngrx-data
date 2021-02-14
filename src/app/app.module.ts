@@ -14,6 +14,8 @@ import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { reducers } from './reducers';
 import { EntityDataModule } from '@ngrx/data';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     EffectsModule.forRoot([]),
     EntityDataModule.forRoot({}),
     StoreRouterConnectingModule.forRoot({
@@ -41,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
       routerState: RouterState.Minimal
     }),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,8 @@
   <mat-card-title>Users</mat-card-title>
   <mat-card-content>
     <table mat-table
-           [dataSource]="dataSource" multiTemplateDataRows
+           [dataSource]="users$ | async"
+           multiTemplateDataRows
            class="mat-elevation-z8">
       <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
         <th mat-header-cell *matHeaderCellDef> {{column}} </th>
